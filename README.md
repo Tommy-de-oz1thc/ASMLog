@@ -1,6 +1,6 @@
 # ASMLog
 
-NASM Assembly Windows DOS Log program
+Amateur radio logging program written in NASM x64 Assembly for Windows
 
 ASMLog is a free amateur radio logging program written in NASM x64 Assembly for Windows.
 
