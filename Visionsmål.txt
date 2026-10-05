@@ -32,28 +32,77 @@ Version  Mål
 1.0 Første officielle gratis ASMLog - FÆRDIG
 
 
-1.1 Første CW-lyd: ASMLog kan sende morsekode
+1.1 Grundlag for CW-træning:
+    - CW-lyd
+    - Mode RADIO / CW / CW + TEXT / TEXT
+    - WPM 15 / 20 / 25 / 30 / 35
+    - Generering af CALL og exchange
+    - Fælles QSO-generator
+    - Facit-system
+    - Cabrillo-kontrol
+    - Claimed Score / Real Score
+    - Highscore
 
-1.2 CW-træning:
-    1.2a callsign.txt
-    1.2b CW-hastighed
-    1.2c træningssessioner
-    1.2d samlet test af CW-træning
+1.2 WPX CW:
+    - Generator
+    - CW / CW + TEXT / TEXT
+    - Facit-log
+    - Cabrillo
+    - Checker
+    - Claimed Score / Real Score
+    - Highscore
 
-1.3 Contest-simulator:
-    ASMLog genererer QSO'er, som brugeren logger
+1.3 ARRL DX CW:
+    - Generator
+    - CW / CW + TEXT / TEXT
+    - Facit-log
+    - Cabrillo
+    - Checker
+    - Claimed Score / Real Score
+    - Highscore
 
-1.4 Drifts-/træningstilstande:
-    1.4a RADIO
-    1.4b CW
-    1.4c CW + TEXT
-    1.4d TEXT
+1.4 Russian DX Contest:
+    - Generator
+    - CW / CW + TEXT / TEXT
+    - Facit-log
+    - Cabrillo
+    - Checker
+    - Claimed Score / Real Score
+    - Highscore
 
-1.5 checklog og afslutning:
-    1.5a checklog.asm og facitlog
-    1.5b Cabrillo-kontrol, Claimed Score og Real Score
-    1.5c Highscore
-    1.5d Oprydning, fejlrettelser og samlet test
+1.5 CQ WW DX CW:
+    - Generator
+    - CW / CW + TEXT / TEXT
+    - Facit-log
+    - Cabrillo
+    - Checker
+    - Claimed Score / Real Score
+    - Highscore
+
+1.6 SAC CW:
+    - Generator
+    - CW / CW + TEXT / TEXT
+    - Facit-log
+    - Cabrillo
+    - Checker
+    - Claimed Score / Real Score
+    - Highscore
+
+1.7 HF:
+    - Generator
+    - CW / CW + TEXT / TEXT
+    - Facit-log
+    - Kontrol
+    - Worked QSOs / Correct QSOs
+    - Highscore
+
+1.8 Færdiggørelse:
+    - Træningssessioner / tidsvalg
+    - s = Slet highscore for hver contest og HF
+    - Oprydning af debug/testkode
+    - Fejlrettelser
+    - Samlet test af RADIO / CW / CW + TEXT / TEXT
+    - Samlet test af alle contests og HF
 
 2.0 Første officielle ASMLog med CW-træning
 
