@@ -95,20 +95,91 @@ Version  Mål
     - Kontrol
     - Worked QSOs / Correct QSOs
     - Highscore
+    - ADIF-eksport
+    - HF viser kun ADIF, ikke Cabrillo
+    - Contest viser kun Cabrillo, ikke ADIF
 
 1.8 Færdiggørelse:
-    - Træningssessioner / tidsvalg
-    - s = Slet highscore for hver contest og HF
-    - Oprydning af debug/testkode
-    - Fejlrettelser
-    - Samlet test af RADIO / CW / CW + TEXT / TEXT
-    - Samlet test af alle contests og HF
+
+    1. HF Log
+       - Færdiggørelse og test af HF-træning
+       - Kontrol af ADIF og logfunktioner
+
+    2. Empty Call
+       - Tomt Call afslutter træningssessionen
+       - Automatisk generering af log og facit
+       - Genbrug af eksisterende udskrivningsfunktioner
+       - Udskriv log skjules i træningsmode
+       - RADIO beholder manuel udskrivning
+       - HF bruger ADIF, contests bruger Cabrillo
+
+    3. Tidsstyring
+       - Kun CW-mode
+       - Valg af 5 / 10 / 15 / 30 / 60 minutter
+       - Ny tom brugerlog og facit-log ved hver session
+       - Registrering af sessionens starttidspunkt
+       - Automatisk kontinuerlig CW-træning
+       - Automatisk afslutning, når tiden udløber
+       - Automatisk generering af Cabrillo og facit-Cabrillo
+       - Automatisk checker og scoreberegning
+       - Highscore med dato, starttidspunkt og varighed
+       - Kun CW gemmer highscore
+       - CW + TEXT og TEXT viser resultater uden highscore
+
+    4. Fejltest
+       - s = Slet highscore for hver contest og HF
+       - Oprydning af debug/testkode
+       - Test af Empty Call og tidsstyring
+       - Test af automatisk logafslutning
+       - Test af ADIF og Cabrillo
+       - Test af skjulte menupunkter og ugyldige valg
+       - Samlet test af RADIO / CW / CW + TEXT / TEXT
+       - Samlet test af alle contests og HF
+       - RADIO-mode skal fortsat fungere uændret
+
+    5. Logo
+       - Design af ASMLog-logo
+       - Programikon
 
 2.0 Første officielle ASMLog med CW-træning
-
+    - Endelig fejltest og godkendelse
+    - Endelig backup som ZIP uden for projektmappen
+    - Klargøring og udgivelse på GitHub
 
 3.0 International version:
     3.0a Engelsk sprog
     3.0b Valg af operatørens land/DXCC
     3.0c Contest-point beregnes ud fra operatørens land
     3.0d ASMLog kan bruges og testes af stationer uden for Danmark
+	
+4.0 Morserino-32 integration:
+    - Tilslutning af Morserino-32 (M32)
+    - M32 kan bruges i CW / CW + TEXT / TEXT
+    - Valg mellem tastatur og M32 i træningsmode
+    - RADIO-mode bruger kun tastatur
+    - M32 må ikke aktiveres i RADIO-mode
+    - Prosign <KN> kan bruges som Enter/feltafslutning
+    - Eksisterende tastaturfunktioner bevares
+    - Backup før ændringer af inputsystemet
+    - Test af alle tre træningsmodes	Skal kun kunne bruges i trænings mode ikke i radio mode.
+
+5.0 Radiointegration:
+    - Automatisk båndregistrering fra Icom IC-7300
+    - Automatisk båndregistrering fra Yaesu FT-897
+    - Bevar mulighed for manuelt båndvalg
+    - Test af forbindelse og korrekt båndregistrering
+
+6.0 SSB Log:
+    - Tilføj SSB som trafikform
+    - Tilpas QSO-registrering til SSB
+    - Understøt SSB i HF Log og relevante contests
+    - ADIF- og Cabrillo-eksport tilpasses SSB
+    - Bevar eksisterende CW-funktioner
+
+7.0 SSB Trainer:
+    - Simulator til SSB-træning
+    - Generering af simulerede stationer og exchanges
+    - Træning i HF Log og relevante contests
+    - Automatisk kontrol af QSO'er
+    - Resultater og highscore for SSB-træning
+    - Genbrug af eksisterende træningssystem, hvor muligt
