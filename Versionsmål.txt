@@ -156,18 +156,13 @@ Version  Mål
     Arbejdet begynder først mandag den 19-10-2026.
     Ingen kodeændringer inden da; bevar fungerende v2.0-backup.
 
-    3.0a Engelsk sprog
-        - Undersøg eksisterende danske menutekster og meddelelser
-        - Tilføj engelsk brugerflade uden at ødelægge eksisterende funktioner
-        - Aftal konkret sprogvalg og standardindstilling før implementering
-
-    3.0b Operatørens land / DXCC
+    3.0a Operatørens land / DXCC
         - Indfør valg/registrering af operatørens land i Settings
         - Brug en entydig land-/DXCC-identifikation
         - Bevar eksisterende kaldesignal og øvrige Settings-data
         - Kontroller samspillet med cty.dat og contestreglerne
 
-    3.0c Internationale contest-point
+    3.0b Internationale contest-point
         - Gennemgå pointreglerne separat for WPX, ARRL DX CW,
           Russian DX, CQ WW DX CW og SAC CW
         - Beregn point i forhold til operatørens valgte land/DXCC,
@@ -180,8 +175,26 @@ Version  Mål
         - Test Claimed Score, Real Score, facit-tjek og Cabrillo
           for flere operatørlande
 
-    3.0d International test og udgivelse
+    3.0c International pointtest
         - Test med danske og udenlandske kaldesignaler/operatørlande
+        - Test alle relevante contest-point, multipliers og DUPE
+        - Kontroller at eksisterende v2.0-beregninger fortsat virker
+
+    3.0d Otte brugerfladesprog
+        - da: Dansk
+        - de: Tysk
+        - fr: Fransk
+        - pl: Polsk
+        - it: Italiensk
+        - es: Spansk
+        - ru: Russisk
+        - en: Engelsk
+        - Tilføj sprogvalg i Settings
+        - Oversæt menuer, beskeder og relevante brugerfladetekster
+        - Bevar dansk som eksisterende sprog
+        - Test alle otte sprog, herunder særlige tegn
+
+    3.0e Samlet sluttest og udgivelse
         - Test alle seks logtyper og RADIO / CW / CW + TEXT / TEXT
         - Kontroller at v2.0-funktionerne fortsat virker
         - Opdater dansk brugervejledning og engelsk kodedokumentation
