@@ -1,0 +1,11 @@
+LOGTYPE=1
+MODE=2
+CALLSIGN=OZ2ABC
+NAME=Tommy Clemmensen
+EMAIL=tommy@clemmensen.dk
+ADDRESS=Sprotoften 38 3tv
+ZIP=5800
+CITY=Nyborg
+POWER=LOW
+ARRLPOWER=100
+WPM=20
