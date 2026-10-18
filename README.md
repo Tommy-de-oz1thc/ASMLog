@@ -1,20 +1,17 @@
 # ASMLog
 
-Amateur radio logging program written in NASM x64 Assembly for Windows
+Free amateur radio logging and CW training software written in NASM x64 Assembly for Windows.
 
-ASMLog is a free amateur radio logging program written in NASM x64 Assembly for Windows.
+ASMLog aims to provide a simple, lightweight logging and CW training program for amateur radio operators. It is also an ongoing Assembly programming project.
 
-The goal of ASMLog is to provide a simple and lightweight logging program for amateur radio operators, while also serving as an ongoing Assembly programming project.
+## Versions
 
-## Version
+- **ASMLog v2.0** — current version, with CW training and contest simulation. See [v2.0/README.md](v2.0/README.md).
+- **ASMLog v1.0** — first official free release, focused on radio logging. See [v1.0/README.md](v1.0/README.md).
 
-Current release: **ASMLog v1.0**
-
-ASMLog v1.0 is the first official free release.
+**Release status:** v2.0 is prepared for publication; its GitHub release has not yet been published. Until publication, v1.0 remains the latest published GitHub release.
 
 ## Supported logs and contests
-
-ASMLog v1.0 supports:
 
 - HF Log
 - CQ WPX CW Contest
@@ -23,23 +20,26 @@ ASMLog v1.0 supports:
 - CQ WW DX CW Contest
 - Scandinavian Activity Contest (SAC CW)
 
-## Features
+## Features in v2.0
 
-- QSO logging
-- Callsign search
-- Duplicate QSO checking for contests
-- Contest scoring and multipliers
-- ADIF export for HF Log
-- Cabrillo export for supported contests
-- Configurable callsign and operator information
-- Configurable power settings
-- Separate ARRL DX power setting
+- QSO logging and callsign search
+- Four operating modes: RADIO, CW, CW + TEXT, and TEXT
+- Timed CW training sessions (5, 10, 15, 30, or 60 minutes)
+- Contest QSO generation, duplicate checking, scoring, and multipliers
+- Facit/reference checking of simulated QSOs
+- Training highscores for CW mode
+- ADIF export for HF Log and Cabrillo export for supported contests
+- Configurable callsign, operator details, and power settings
 - Persistent settings
 
 ## Platform
 
 - Windows x64
-- Written in NASM Assembly
+- NASM x64 Assembly
+
+## Documentation
+
+The v2.0 user guide is in Danish. Technical code documentation is in English. Documentation files are provided separately with the v2.0 project; consult the v2.0 folder for the actual filenames and locations.
 
 ## Author
 
