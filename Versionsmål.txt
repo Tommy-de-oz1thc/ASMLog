@@ -141,17 +141,59 @@ Version  Mål
        - Design af ASMLog-logo
        - Programikon
 
-2.0 Første officielle ASMLog med CW-træning
-    - Endelig fejltest og godkendelse
+2.0 Første officielle ASMLog med CW-træning - FÆRDIG / UDGIVET PÅ GITHUB
+    - Endelig fejltest og godkendelse gennemført
     - Endelig backup som ZIP uden for projektmappen
-    - Klargøring og udgivelse på GitHub
+    - GitHub-release oprettet; ny release inkluderer data/-mappen
+    - Dansk brugervejledning: første udgave, senere udbygning af highscore/facit-tjek
+    - Engelsk kodedokumentation: første udgave
+    - WPX-pointberegning og multipliers i wpx.asm
+    - Eksisterende WPX-logoptælling i ASMLog.asm bevares i v2.0
+    - Kendt begrænsning: Start ny log, før WPX-highscore fungerer korrekt
+    - Ingen yderligere kodeflytninger kræves for v2.0
 
-3.0 International version:
+3.0 International version - PLANLAGT
+    Arbejdet begynder først mandag den 19-10-2026.
+    Ingen kodeændringer inden da; bevar fungerende v2.0-backup.
+
     3.0a Engelsk sprog
-    3.0b Valg af operatørens land/DXCC
-    3.0c Contest-point beregnes ud fra operatørens land
-    3.0d ASMLog kan bruges og testes af stationer uden for Danmark
-	
+        - Undersøg eksisterende danske menutekster og meddelelser
+        - Tilføj engelsk brugerflade uden at ødelægge eksisterende funktioner
+        - Aftal konkret sprogvalg og standardindstilling før implementering
+
+    3.0b Operatørens land / DXCC
+        - Indfør valg/registrering af operatørens land i Settings
+        - Brug en entydig land-/DXCC-identifikation
+        - Bevar eksisterende kaldesignal og øvrige Settings-data
+        - Kontroller samspillet med cty.dat og contestreglerne
+
+    3.0c Internationale contest-point
+        - Gennemgå pointreglerne separat for WPX, ARRL DX CW,
+          Russian DX, CQ WW DX CW og SAC CW
+        - Beregn point i forhold til operatørens valgte land/DXCC,
+          hvor contestreglerne kræver det
+        - Undgå hårdkodet Danmark/OZ1THC i operatørafhængige beregninger
+        - Bevar contest-specifikke regler, multipliers og DUPE-håndtering
+        - Undersøg WPX-logparserens antagelser før nye pointværdier
+        - Hold fælles programstyring i ASMLog.asm og contestregler
+          i de respektive contestmoduler
+        - Test Claimed Score, Real Score, facit-tjek og Cabrillo
+          for flere operatørlande
+
+    3.0d International test og udgivelse
+        - Test med danske og udenlandske kaldesignaler/operatørlande
+        - Test alle seks logtyper og RADIO / CW / CW + TEXT / TEXT
+        - Kontroller at v2.0-funktionerne fortsat virker
+        - Opdater dansk brugervejledning og engelsk kodedokumentation
+        - Tag backup før større ændringer og før v3.0-release
+        - ASMLog skal kunne bruges og testes af stationer uden for Danmark
+
+    Arbejdsmetode:
+        - En lille funktion/ændring ad gangen
+        - Build med build.bat og praktisk QSO-test efter ændringer
+        - Ingen unødvendig flytning af CW-, tids- eller inputfunktioner
+        - Bevar den fungerende v2.0-version som sikker tilbagefaldsmulighed
+
 4.0 Morserino-32 integration:
     - Tilslutning af Morserino-32 (M32)
     - M32 kan bruges i CW / CW + TEXT / TEXT
