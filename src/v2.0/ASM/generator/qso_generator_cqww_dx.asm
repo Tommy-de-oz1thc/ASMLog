@@ -1,0 +1,111 @@
+bits 64
+default rel
+
+global cqww_generated_continent
+global qso_generate_cqww_dx
+global cqww_generated_entity
+global cqww_generated_zone
+global cqww_exchange
+
+
+extern cty_match_continent
+
+extern cty_match_cq_zone
+extern cty_match_entity
+
+
+
+extern log_text
+extern lookup_country
+extern printf
+extern sprintf
+extern strcpy_s
+
+section .data
+
+cqww_call_format:
+    db "CQWW CALL: %s", 10, 0
+
+cqww_exchange_format:
+    db "599 %u", 0
+
+
+
+cqww_rst_format:
+    db "CQWW RST: 599", 10, 0
+
+cqww_zone_format:
+    db "CQWW ZONE: %u", 10, 0
+
+
+
+section .bss
+
+
+
+cqww_exchange:
+    resb 16
+
+cqww_generated_continent: resb 4
+cqww_generated_entity:    resb 64
+
+cqww_generated_zone: resd 1
+
+section .text
+
+qso_generate_cqww_dx:
+
+    push rbx
+    sub rsp, 48
+
+    ; RCX = pointer til valgt CALL
+    mov rbx, rcx
+	
+    ; Kopier simulatorens CALL til CTY-buffer
+    lea rcx, [log_text]
+    mov edx, 256
+    mov r8, rbx
+    call strcpy_s
+
+    ; Find land og CQ-zone
+    lea rcx, [log_text]
+    call lookup_country
+
+    ; Gem generatorens land
+    lea rcx, [cqww_generated_entity]
+    mov edx, 64
+    lea r8, [cty_match_entity]
+    call strcpy_s
+
+    ; Gem generatorens kontinent
+    lea rcx, [cqww_generated_continent]
+    mov edx, 4
+    lea r8, [cty_match_continent]
+    call strcpy_s
+
+	; Gem generatorens zone foer brugerens CALL behandles
+    mov eax, [cty_match_cq_zone]
+    mov [cqww_generated_zone], eax
+
+
+    
+
+    
+.cqww_state_copied:
+
+    
+
+    ; Byg samlet exchange "599 14"
+    lea rcx, [cqww_exchange]
+    lea rdx, [cqww_exchange_format]
+    mov r8d, [cty_match_cq_zone]
+    call sprintf
+
+    
+
+    ; Returner samme CALL-pointer
+    mov rax, rbx
+
+    add rsp, 48
+    pop rbx
+    ret
